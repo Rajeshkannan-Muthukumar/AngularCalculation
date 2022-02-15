@@ -196,7 +196,79 @@ export class ConeComponent{
     }
 }
 ```
+## app.component.html
+```
+<div class="backgd">
+  <h2>MATH CALCULATION</h2>
+  <div class="container">
+      
+<Rectangle-Area>
 
+</Rectangle-Area>
+
+<Cylinder-Vol>
+
+</Cylinder-Vol>
+
+<Cone-Vol>
+
+</Cone-Vol>
+<div class="footer">DEVELOPED BY: RAJESHKANNAN.M</div>
+
+  </div>
+
+</div>
+
+```
+## app.component.css
+```
+h2{
+    text-align: center;
+    color: rgb(17, 14, 39);
+    margin-top: 10px;
+
+
+}
+.container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .backgd{
+    background-color: rgb(226, 15, 209) ;
+}
+  .footer{
+      text-align: center;
+      font-size: 30px;
+      color: rgb(15, 15, 46);
+      background-color: rgb(55, 152, 105);
+      margin-top: 10px;
+  }
+```
+## app.module.ts
+```
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppComponent } from './app.component';
+import { ConeComponent } from './cone/cone.cpomponent';
+import { CylinderComponent } from './cylinder/cylinder.component';
+import { RectangleComponent } from './rectangle/rectangle.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,RectangleComponent,CylinderComponent,ConeComponent
+  ],
+  imports: [
+    BrowserModule,FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+```
 
 ## OUTPUT:
 # without output
